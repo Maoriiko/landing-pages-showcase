@@ -1,0 +1,46 @@
+:root{--bg:#f0f4f8;--dark:#0d1117;--accent:#0070f3;--green:#00a651;--border:#dde2e8;--muted:#6b7280}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--dark);font-family:'Manrope',sans-serif}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;background:#fff;border-bottom:1px solid var(--border)}
+.logo{font-size:1.4rem;font-weight:800}.logo span{color:var(--accent)}
+nav ul{list-style:none;display:flex;gap:2.5rem}
+nav ul a{color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .2s}
+nav ul a:hover{color:var(--dark)}
+.nr{display:flex;gap:.75rem;align-items:center}
+.ll{color:var(--dark);text-decoration:none;font-size:.88rem;font-weight:600;padding:.5rem 1rem}
+.oa{background:var(--accent);color:#fff;padding:.6rem 1.4rem;border-radius:8px;text-decoration:none;font-size:.88rem;font-weight:700;transition:all .2s}
+.oa:hover{background:#005ce0;transform:translateY(-1px)}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding:5rem 5%;min-height:85vh;background:linear-gradient(135deg,#f0f4f8,#e8f0fe)}
+.badge-row{display:flex;gap:.75rem;margin-bottom:1.5rem}
+.badge{display:inline-block;background:#fff;border:1px solid var(--border);padding:.3rem .9rem;border-radius:100px;font-size:.75rem;font-weight:700;color:var(--muted)}
+.badge.green{background:#f0fdf4;border-color:#bbf7d0;color:var(--green)}
+h1{font-size:clamp(2rem,4vw,3.8rem);font-weight:800;line-height:1.1;margin-bottom:1.25rem}
+h1 span{color:var(--accent)}
+.hero-text p{color:var(--muted);font-size:1.05rem;line-height:1.7;margin-bottom:2rem;max-width:440px}
+.app-row{display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.dl-app{background:var(--dark);color:#fff;padding:.85rem 2rem;border-radius:10px;text-decoration:none;font-size:.92rem;font-weight:700;transition:all .3s}
+.dl-app:hover{background:#111;transform:translateY(-2px)}
+.open-link{color:var(--accent);text-decoration:none;font-size:.9rem;font-weight:600}
+.trust-row{display:flex;gap:1.5rem;flex-wrap:wrap}
+.trust-row span{font-size:.78rem;color:var(--muted);font-weight:500}
+.card-widget{background:linear-gradient(135deg,#0d1117,#1a2535);border-radius:18px;padding:2rem;color:#fff;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.2);margin-bottom:1.5rem}
+.card-widget::before{content:'';position:absolute;width:200px;height:200px;background:rgba(0,112,243,.15);border-radius:50%;top:-80px;right:-80px}
+.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:2.5rem}
+.card-label{font-size:.8rem;letter-spacing:.35em;font-weight:700;color:rgba(255,255,255,.7)}
+.card-num{font-size:1rem;letter-spacing:.2em;color:rgba(255,255,255,.8);margin-bottom:.75rem;font-weight:300}
+.card-holder{font-size:.82rem;color:rgba(255,255,255,.6);font-weight:500}
+.balance-section{background:#fff;border-radius:18px;padding:1.75rem;border:1px solid var(--border)}
+.bl{font-size:.78rem;color:var(--muted);font-weight:600;margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.1em}
+.ba{font-size:2.2rem;font-weight:800;margin-bottom:1rem}
+.sparkline{height:50px;display:flex;align-items:flex-end;gap:2px;margin-bottom:1.25rem}
+.quick-stats{display:flex;gap:2rem}
+.qs p:first-child{font-size:1.1rem;font-weight:700;margin-bottom:.2rem}
+.qs p:last-child{font-size:.72rem;color:var(--muted)}
+.qv.up{color:var(--green)}
+.features-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;padding:5rem 5%;background:#fff;border-top:1px solid var(--border)}
+.fr span{font-size:2rem;display:block;margin-bottom:1.25rem}
+.fr h3{font-size:1.05rem;font-weight:700;margin-bottom:.6rem}
+.fr p{color:var(--muted);font-size:.88rem;line-height:1.6}
+footer{text-align:center;padding:2rem;color:var(--muted);font-size:.8rem;border-top:1px solid var(--border)}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:3rem}.features-row{grid-template-columns:1fr 1fr}nav ul{display:none}}
+@media(max-width:500px){.features-row{grid-template-columns:1fr}}

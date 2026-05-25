@@ -1,0 +1,3 @@
+window.addEventListener('scroll',()=>{const y=window.scrollY;const mi=document.querySelector('.main-img');if(mi)mi.style.transform='translateY('+y*.08+'px)';});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0)'}}));
+document.querySelectorAll('.sr').forEach((el,i)=>{el.style.cssText='opacity:0;transform:translateY(20px);transition:all .6s '+(i*.1)+'s, background .3s';obs.observe(el);});

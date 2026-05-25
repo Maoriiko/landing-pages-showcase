@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STRYD — Performance Footwear</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav>
+  <div class="logo">STRYD</div>
+  <ul><li><a href="#">Run</a></li><li><a href="#">Train</a></li><li><a href="#">Life</a></li><li><a href="#">Sale</a></li></ul>
+  <div class="nav-right"><a href="#" class="cart">🛒 Cart (0)</a></div>
+  <button class="mob-menu" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+</nav>
+<section class="hero">
+  <div class="hero-bg-text">RUN</div>
+  <div class="product-display">
+    <div class="shoe-visual">
+      <div class="shoe-shadow"></div>
+      <div class="shoe-body" id="shoe"></div>
+    </div>
+  </div>
+  <div class="hero-copy">
+    <span class="edition">LIMITED EDITION</span>
+    <h1>APEX<br>PRO<br>X9</h1>
+    <p>Carbon-fiber plate. 38mm stack. Race-ready weight at 198g. Built to break records.</p>
+    <div class="price-row"><span class="price">$229</span><span class="was">$289</span><span class="save">SAVE 21%</span></div>
+    <div class="colors"><span class="color-opt active" style="--c:#ff3a2d" onclick="setColor(this,'#ff3a2d')"></span><span class="color-opt" style="--c:#0a0a0a" onclick="setColor(this,'#0a0a0a')"></span><span class="color-opt" style="--c:#2a5cff" onclick="setColor(this,'#2a5cff')"></span><span class="color-opt" style="--c:#f5f5f5" onclick="setColor(this,'#f5f5f5')"></span></div>
+    <a href="#" class="add-cart">ADD TO CART</a>
+  </div>
+</section>
+<section class="features-bar">
+  <div class="fb"><span>🏃</span><p>198g Race Weight</p></div>
+  <div class="fb"><span>⚡</span><p>Carbon Fiber Plate</p></div>
+  <div class="fb"><span>☁️</span><p>38mm Stack Height</p></div>
+  <div class="fb"><span>🌍</span><p>Free Global Shipping</p></div>
+</section>
+<section class="product-grid">
+  <h2>Also in the <span>Collection</span></h2>
+  <div class="pg">
+    <div class="pcard"><div class="pc-img" style="background:linear-gradient(135deg,#1a1a2e,#16213e)"></div><h4>APEX TRAIL</h4><p>$189</p></div>
+    <div class="pcard"><div class="pc-img" style="background:linear-gradient(135deg,#2d1b69,#11998e)"></div><h4>SWIFT LITE</h4><p>$159</p></div>
+    <div class="pcard"><div class="pc-img" style="background:linear-gradient(135deg,#373b44,#4286f4)"></div><h4>DAILY RUNNER</h4><p>$129</p></div>
+  </div>
+</section>
+<footer><p>© 2025 STRYD · Free returns within 60 days</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

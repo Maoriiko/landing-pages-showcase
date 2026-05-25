@@ -1,0 +1,3 @@
+document.querySelectorAll('.pet-card').forEach(card=>{card.addEventListener('click',function(){document.querySelectorAll('.pet-card').forEach(c=>c.classList.remove('active'));this.classList.add('active');this.style.transform='scale(1.05) translateY(-4px)';setTimeout(()=>this.style.transform='',300);});});
+const obs=new IntersectionObserver(entries=>entries.forEach((e,i)=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0)';};}),{threshold:.1});
+document.querySelectorAll('.svc').forEach((el,i)=>{el.style.opacity=0;el.style.transform='translateY(30px)';el.style.transition=`opacity .6s ${i*.1}s,transform .6s ${i*.1}s`;obs.observe(el);});

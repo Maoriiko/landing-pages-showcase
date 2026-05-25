@@ -1,0 +1,3 @@
+document.getElementById('walletBtn').addEventListener('click',function(){this.textContent='0x3a...f7c2 ✓';this.style.background='#06ffa5';this.style.color='#000';});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0)'}}));
+document.querySelectorAll('.nft-card,.sr-item').forEach((el,i)=>{el.style.cssText='opacity:0;transform:translateY(25px);transition:all .6s '+(i*.1)+'s, transform .4s, border .3s, box-shadow .3s';obs.observe(el);});

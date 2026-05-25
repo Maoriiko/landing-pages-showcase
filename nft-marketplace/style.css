@@ -1,0 +1,42 @@
+:root{--bg:#08060f;--surface:#10091a;--text:#e8e0ff;--muted:#5040a0;--accent:#8338ec;--pink:#ff006e;--cyan:#00d4ff;--border:rgba(131,56,236,.15)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'General Sans',system-ui,sans-serif;overflow-x:hidden}
+#aurora{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at 20% 50%,rgba(131,56,236,.08),transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(255,0,110,.06),transparent 50%),radial-gradient(ellipse at 60% 80%,rgba(0,212,255,.05),transparent 50%)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5%;background:rgba(8,6,15,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.logo{font-size:1.2rem;font-weight:700;color:var(--accent);letter-spacing:.1em}
+nav ul{list-style:none;display:flex;gap:2.5rem}
+nav ul a{color:var(--muted);text-decoration:none;font-size:.88rem;transition:color .3s}
+nav ul a:hover{color:var(--text)}
+.wallet-btn{background:linear-gradient(135deg,var(--accent),var(--pink));color:#fff;border:none;padding:.65rem 1.5rem;border-radius:100px;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .3s;font-family:inherit}
+.wallet-btn:hover{opacity:.85;transform:translateY(-1px)}
+.hero{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:center;padding:8rem 5%;min-height:92vh;position:relative;z-index:1}
+.live-row{display:flex;align-items:center;gap:.75rem;font-size:.8rem;color:var(--muted);margin-bottom:2rem;letter-spacing:.05em}
+.live-pulse{width:8px;height:8px;border-radius:50%;background:#06ffa5;box-shadow:0 0 10px #06ffa5;animation:pulse 1.5s ease-in-out infinite}
+.live-row strong{color:#06ffa5}
+h1{font-size:clamp(3rem,6.5vw,6rem);font-weight:700;line-height:.95;margin-bottom:1.5rem;letter-spacing:-.02em}
+h1 span{background:linear-gradient(135deg,var(--accent),var(--pink),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-text p{color:var(--muted);font-size:1rem;line-height:1.7;max-width:400px;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.explore-btn{background:linear-gradient(135deg,var(--accent),var(--pink));color:#fff;padding:.9rem 2.2rem;border-radius:100px;text-decoration:none;font-size:.92rem;font-weight:600;transition:all .3s;box-shadow:0 8px 25px rgba(131,56,236,.25)}
+.explore-btn:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(131,56,236,.4)}
+.create-btn{border:1px solid var(--border);color:var(--text);padding:.9rem 2.2rem;border-radius:100px;text-decoration:none;font-size:.92rem;transition:all .3s}
+.create-btn:hover{border-color:var(--accent);color:var(--accent)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:1rem}
+.nft-card{background:var(--surface);border-radius:16px;overflow:hidden;border:1px solid var(--border);transition:all .4s;cursor:pointer}
+.nft-card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 20px 50px rgba(131,56,236,.2)}
+.nc3{grid-column:1;grid-row:1/3;border-radius:20px}
+.nc3 .nft-img{height:300px}
+.nft-img{height:160px;animation:hueShift 8s linear infinite}
+.nft-info{padding:1rem}
+.nft-info p{font-size:.82rem;font-weight:600;margin-bottom:.3rem;color:var(--text)}
+.nft-info span{font-size:.78rem;color:var(--accent);font-weight:700}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--surface);border-top:1px solid var(--border);position:relative;z-index:1}
+.sr-item{text-align:center;padding:3rem 2rem;border-right:1px solid var(--border)}
+.sr-item:last-child{border-right:none}
+.sr-item p{font-size:2.5rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.4rem}
+.sr-item span{font-size:.8rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+footer{text-align:center;padding:2.5rem;color:var(--muted);font-size:.82rem;border-top:1px solid var(--border);position:relative;z-index:1}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:3rem}.stats-row{grid-template-columns:1fr 1fr}nav ul{display:none}}
+@media(max-width:480px){.stats-row{grid-template-columns:1fr}.nc3{grid-column:auto;grid-row:auto}.nc3 .nft-img{height:160px}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)}}
+@keyframes hueShift{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}

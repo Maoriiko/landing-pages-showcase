@@ -1,0 +1,4 @@
+const spark=document.getElementById('spark');
+[30,45,38,52,48,62,55,70,64,80,72,88].forEach((v,i)=>{const b=document.createElement('div');b.style.cssText=`flex:1;height:${v}%;background:${v===88?'#0070f3':'#dde2e8'};border-radius:2px;transition:height .5s ${i*.05}s`;spark.appendChild(b);});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0)'}}));
+document.querySelectorAll('.fr').forEach((el,i)=>{el.style.cssText=`opacity:0;transform:translateY(20px);transition:all .5s ${i*.1}s`;obs.observe(el);});

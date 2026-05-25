@@ -1,0 +1,37 @@
+:root{--bg:#fdf9f5;--rose:#d4849e;--blush:#f5dfe8;--sage:#8fad8c;--dark:#2d2420;--mid:#9a8880}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--dark);font-family:'Jost',sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 3rem;background:rgba(253,249,245,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(212,132,158,.15)}
+.logo{font-family:'Gilda Display',serif;font-size:1.4rem;color:var(--dark);white-space:nowrap}
+nav ul{list-style:none;display:flex;gap:2.5rem}
+nav ul a{color:var(--mid);text-decoration:none;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;transition:color .3s;font-weight:400}
+nav ul a:hover,.book{color:var(--rose)!important}
+.mob-nav{display:none;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--dark)}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:6rem 2rem}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,var(--blush) 0%,rgba(253,249,245,0) 70%);opacity:.6}
+.petal{position:absolute;font-size:3rem;opacity:.15;animation:floatPetal 8s ease-in-out infinite;color:var(--rose)}
+.p1{top:15%;left:8%;animation-delay:0s}.p2{top:20%;right:12%;animation-delay:-2s}.p3{bottom:25%;left:15%;animation-delay:-4s}.p4{bottom:20%;right:8%;animation-delay:-6s}
+.hero-inner{position:relative;z-index:2;max-width:650px}
+.sub-tag{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--rose);margin-bottom:1.5rem;display:block;animation:fadeUp .8s .3s both}
+h1{font-family:'Gilda Display',serif;font-size:clamp(3rem,6vw,5rem);line-height:1.15;margin-bottom:1.5rem;animation:fadeUp .8s .5s both}
+h1 em{font-style:italic;color:var(--rose)}
+.hero-inner p{font-size:1.05rem;color:var(--mid);line-height:1.9;max-width:500px;margin:0 auto 2.5rem;font-weight:300;animation:fadeUp .8s .7s both}
+.cta{display:inline-block;background:var(--rose);color:#fff;padding:.9rem 2.8rem;border-radius:100px;text-decoration:none;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;transition:all .4s;animation:fadeUp .8s .9s both}
+.cta:hover{background:var(--dark);transform:translateY(-3px);box-shadow:0 10px 30px rgba(212,132,158,.3)}
+.services{padding:6rem 4rem;background:#fff}
+.services h2{font-family:'Gilda Display',serif;font-size:3rem;text-align:center;margin-bottom:3.5rem}
+.services h2 em{color:var(--rose);font-style:italic}
+.srv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;max-width:1000px;margin:0 auto}
+.srv{text-align:center;padding:2.5rem 1.5rem;border:1px solid rgba(212,132,158,.2);border-radius:4px;transition:all .4s}
+.srv:hover{border-color:var(--rose);background:rgba(245,223,232,.2);transform:translateY(-4px)}
+.si{font-size:2.5rem;display:block;margin-bottom:1.25rem}
+.srv h3{font-family:'Gilda Display',serif;font-size:1.15rem;margin-bottom:.75rem;color:var(--dark)}
+.srv p{font-size:.88rem;color:var(--mid);line-height:1.7;font-weight:300}
+.testimonial{background:var(--blush);padding:6rem 4rem;text-align:center}
+blockquote{font-family:'Gilda Display',serif;font-size:clamp(1.3rem,3vw,2rem);line-height:1.6;color:var(--dark);max-width:700px;margin:0 auto 1.5rem;font-style:italic}
+cite{font-size:.85rem;color:var(--rose);letter-spacing:.15em;text-transform:uppercase}
+footer{text-align:center;padding:2.5rem;color:var(--mid);font-size:.8rem;border-top:1px solid rgba(212,132,158,.2)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes floatPetal{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-20px) rotate(15deg)}}
+@media(max-width:900px){nav{padding:1.2rem 1.5rem}nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:#fdf9f5;flex-direction:column;padding:1rem 2rem;border-bottom:1px solid rgba(212,132,158,.2);gap:.75rem}nav ul.mob-open{display:flex}.mob-nav{display:block}.srv-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.srv-grid{grid-template-columns:1fr}.services{padding:4rem 1.5rem}.testimonial{padding:4rem 1.5rem}}

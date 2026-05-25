@@ -1,0 +1,5 @@
+const msgs={'$25':'$25 provides notebooks for 5 children','$50':'$50 covers school supplies for one child for a year','$100':'$100 trains a teacher for one week','$250':'$250 funds a water filter for a whole family'};
+document.querySelectorAll('.am').forEach(b=>{b.addEventListener('click',function(){document.querySelectorAll('.am').forEach(x=>x.classList.remove('active'));this.classList.add('active');document.getElementById('impText').textContent=msgs[this.textContent];document.querySelector('.donate-big').textContent='Donate '+this.textContent+' Now';});});
+const nums=document.querySelectorAll('.in');
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const t=+e.target.dataset.t;let c=0;const s=t/80;const iv=setInterval(()=>{c=Math.min(c+s,t);e.target.textContent=Math.floor(c).toLocaleString();if(c>=t)clearInterval(iv);},16);obs.unobserve(e.target);}});},{threshold:.5});
+nums.forEach(n=>obs.observe(n));

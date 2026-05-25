@@ -1,0 +1,3 @@
+document.querySelectorAll('.tab').forEach(tab=>{tab.addEventListener('click',function(){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));this.classList.add('active');});});
+document.querySelector('.swap-btn').addEventListener('click',function(){const from=document.querySelectorAll('.sw-field input')[0];const to=document.querySelectorAll('.sw-field input')[1];[from.value,to.value]=[to.value,from.value];this.style.transform='rotate(180deg)';setTimeout(()=>this.style.transform='',300);});
+document.querySelectorAll('.dp').forEach(d=>{d.addEventListener('click',function(){document.querySelectorAll('.sw-field input')[1].value=this.textContent.replace(/from \$\d+/,'').trim().replace(/[🗼🗽🏯🏖🎰]/,'').trim();});});

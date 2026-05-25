@@ -1,0 +1,3 @@
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0)'}}));
+document.querySelectorAll('.sc').forEach((el,i)=>{el.style.cssText='opacity:0;transform:translateY(25px);transition:all .5s '+(i*.1)+'s, border .3s, box-shadow .3s, transform .3s';obs.observe(el);});
+document.querySelector('.quick-book button').addEventListener('click',function(){const sel=document.querySelector('.quick-book select').value;const date=document.querySelector('.quick-book input').value;if(sel&&date){alert('Appointment requested for '+sel+' on '+date+'. We will confirm within 24h!');}else{alert('Please select a service and date.');}});

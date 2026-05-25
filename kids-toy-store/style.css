@@ -1,0 +1,56 @@
+:root{--bg:#fffef9;--dark:#1a1440;--orange:#ff6b35;--purple:#7c3aed;--pink:#ec4899;--yellow:#fbbf24;--green:#10b981;--border:#f0e8ff;--muted:#6b7280}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--dark);font-family:'Nunito',sans-serif;overflow-x:hidden}
+.rainbow-bar{height:6px;background:linear-gradient(90deg,#ff6b35,#fbbf24,#10b981,#3b82f6,#7c3aed,#ec4899)}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;background:#fff;border-bottom:2px solid var(--border);flex-wrap:wrap;gap:.5rem}
+.logo{font-family:'Baloo 2',cursive;font-size:1.5rem;font-weight:800;color:var(--dark)}
+nav ul{list-style:none;display:flex;gap:2rem}
+nav ul a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:600;transition:color .2s}
+nav ul a:hover{color:var(--purple)}
+.nav-r{display:flex;gap:.75rem;align-items:center}
+.cart-nav{color:var(--dark);text-decoration:none;font-size:1rem;font-weight:700;padding:.5rem 1rem;border:2px solid var(--border);border-radius:100px}
+.shop-nav{background:linear-gradient(135deg,var(--orange),var(--pink));color:#fff;padding:.65rem 1.5rem;border-radius:100px;text-decoration:none;font-size:.9rem;font-weight:800;transition:all .3s;box-shadow:0 4px 15px rgba(236,72,153,.25)}
+.shop-nav:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(236,72,153,.35)}
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;padding:5rem 5%;position:relative;overflow:hidden;background:linear-gradient(160deg,#fffef9,#f5f0ff)}
+.floating-toys{position:absolute;inset:0;pointer-events:none}
+.toy{position:absolute;font-size:3rem;animation:toyFloat 6s ease-in-out infinite;filter:drop-shadow(0 4px 8px rgba(0,0,0,.1))}
+.t1{top:10%;left:5%;animation-delay:0s}.t2{top:15%;right:8%;animation-delay:1s}.t3{bottom:25%;left:3%;animation-delay:2s}.t4{bottom:20%;right:5%;animation-delay:.5s}.t5{top:50%;left:8%;animation-delay:1.5s}.t6{top:40%;right:3%;animation-delay:2.5s}
+.hero-content{max-width:620px;text-align:center;position:relative;z-index:1}
+.hero-badge{display:inline-block;background:var(--yellow);color:var(--dark);padding:.4rem 1.2rem;border-radius:100px;font-size:.82rem;font-weight:800;margin-bottom:1.5rem;animation:bounceIn .8s .2s both}
+h1{font-family:'Baloo 2',cursive;font-size:clamp(3rem,6vw,5.5rem);font-weight:800;line-height:1.05;margin-bottom:1.25rem;animation:fadeUp .7s .3s both}
+h1 span{color:var(--orange)}
+.hero-content>p{color:var(--muted);font-size:1.05rem;line-height:1.7;margin-bottom:2rem;animation:fadeUp .7s .5s both}
+.age-picker{margin-bottom:2rem;animation:fadeUp .7s .6s both}
+.age-picker p{font-size:.82rem;font-weight:700;color:var(--muted);margin-bottom:.75rem;text-transform:uppercase;letter-spacing:.1em}
+.ages{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap}
+.age-btn{background:#fff;border:2px solid var(--border);padding:.5rem 1.25rem;border-radius:100px;font-size:.9rem;font-weight:700;text-decoration:none;color:var(--dark);transition:all .2s;font-family:'Nunito',sans-serif}
+.age-btn:hover,.age-btn.active{background:var(--purple);color:#fff;border-color:var(--purple)}
+.explore-toys{display:inline-block;background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;padding:1rem 3rem;border-radius:100px;text-decoration:none;font-size:1.05rem;font-weight:800;transition:all .3s;box-shadow:0 6px 20px rgba(124,58,237,.25);animation:fadeUp .7s .8s both}
+.explore-toys:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(124,58,237,.35)}
+.product-row{padding:5rem 5%;background:#fff;border-top:1px solid var(--border)}
+.product-row h2{font-family:'Baloo 2',cursive;font-size:2rem;font-weight:800;margin-bottom:2.5rem}
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.prod-card{border-radius:20px;overflow:hidden;border:2px solid var(--border);transition:all .3s;cursor:pointer;background:#fff}
+.prod-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.1)}
+.pc1:hover{border-color:var(--green)}.pc2:hover{border-color:var(--orange)}.pc3:hover{border-color:var(--purple)}.pc4:hover{border-color:var(--yellow)}
+.prod-emoji{font-size:4rem;text-align:center;padding:1.5rem;display:block;background:linear-gradient(160deg,#f8f5ff,#fff5f0)}
+.prod-info{padding:1.25rem}
+.age-tag{display:inline-block;background:#f0e8ff;color:var(--purple);padding:.2rem .7rem;border-radius:100px;font-size:.72rem;font-weight:700;margin-bottom:.5rem}
+.prod-info h4{font-family:'Baloo 2',cursive;font-size:1.1rem;font-weight:700;margin-bottom:.25rem}
+.prod-info>p{color:var(--muted);font-size:.82rem;margin-bottom:.5rem}
+.stars{font-size:.8rem;margin-bottom:.75rem}
+.prod-price{display:flex;align-items:center;justify-content:space-between}
+.prod-price span{font-family:'Baloo 2',cursive;font-size:1.4rem;font-weight:800;color:var(--dark)}
+.prod-price button{background:var(--orange);color:#fff;border:none;padding:.5rem 1rem;border-radius:100px;font-size:.8rem;font-weight:800;cursor:pointer;transition:all .2s;font-family:'Nunito',sans-serif}
+.prod-price button:hover{background:#e05520;transform:scale(1.05)}
+.trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--dark);padding:2.5rem 5%}
+.tr2{text-align:center;border-right:1px solid rgba(255,255,255,.08);padding:1rem}
+.tr2:last-child{border-right:none}
+.tr2 span{font-size:1.8rem;display:block;margin-bottom:.5rem}
+.tr2 p{color:rgba(255,255,255,.6);font-size:.82rem;font-weight:600}
+footer{text-align:center;padding:2rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+@media(max-width:900px){.prod-grid{grid-template-columns:1fr 1fr}.trust-row{grid-template-columns:1fr 1fr}.floating-toys{display:none}nav ul{display:none}}
+@media(max-width:480px){.prod-grid{grid-template-columns:1fr}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes bounceIn{0%{transform:scale(.5);opacity:0}60%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
+@keyframes toyFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-20px) rotate(10deg)}}

@@ -1,0 +1,4 @@
+document.querySelectorAll('.age-btn').forEach(btn=>{btn.addEventListener('click',function(e){e.preventDefault();document.querySelectorAll('.age-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active');});});
+document.querySelectorAll('.prod-price button').forEach(btn=>{btn.addEventListener('click',function(){this.textContent='✓ Added!';this.style.background='#10b981';setTimeout(()=>{this.textContent='Add 🛒';this.style.background='';},2000);const cart=document.querySelector('.cart-nav');let n=+(cart.textContent.match(/\d+/)||[0])[0]+1;cart.textContent='🛒 '+n;});});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0) scale(1)'}}));
+document.querySelectorAll('.prod-card').forEach((el,i)=>{el.style.cssText='opacity:0;transform:translateY(30px) scale(.96);transition:all .5s '+(i*.1)+'s, box-shadow .3s, transform .3s, border .3s';obs.observe(el);});

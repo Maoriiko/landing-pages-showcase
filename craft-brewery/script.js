@@ -1,0 +1,2 @@
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateX(0)'}}));
+document.querySelectorAll('.tap-item').forEach((el,i)=>{el.style.cssText='opacity:0;transform:translateX(-30px);transition:all .6s '+(i*.12)+'s, padding .3s, background .3s';obs.observe(el);});

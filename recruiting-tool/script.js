@@ -1,0 +1,3 @@
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0)'}}));
+document.querySelectorAll('.feat').forEach((el,i)=>{el.style.cssText='opacity:0;transform:translateY(20px);transition:all .5s '+(i*.1)+'s';obs.observe(el);});
+document.querySelectorAll('.kb-card').forEach(c=>{c.addEventListener('click',function(){this.classList.toggle('active');});});

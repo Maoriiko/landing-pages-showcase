@@ -1,0 +1,10 @@
+const c=document.getElementById('bg'),ctx=c.getContext('2d');
+c.width=window.innerWidth;c.height=window.innerHeight;
+window.addEventListener('resize',()=>{c.width=window.innerWidth;c.height=window.innerHeight;});
+const particles=Array.from({length:80},()=>({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.5+.5,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,alpha:Math.random()*.5+.1}));
+function draw(){ctx.clearRect(0,0,c.width,c.height);
+const grad=ctx.createRadialGradient(c.width/2,c.height*.3,0,c.width/2,c.height*.3,c.width*.6);
+grad.addColorStop(0,'rgba(124,58,237,0.08)');grad.addColorStop(.5,'rgba(6,182,212,0.04)');grad.addColorStop(1,'transparent');
+ctx.fillStyle=grad;ctx.fillRect(0,0,c.width,c.height);
+particles.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>c.width)p.vx*=-1;if(p.y<0||p.y>c.height)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(124,58,237,${p.alpha})`;ctx.fill();});
+requestAnimationFrame(draw);}draw();

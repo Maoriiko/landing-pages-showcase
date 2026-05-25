@@ -1,0 +1,3 @@
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0)'}}));
+document.querySelectorAll('.cat-card').forEach((el,i)=>{el.style.cssText='opacity:0;transform:translateY(20px);transition:all .4s '+(i*.06)+'s, border .3s, box-shadow .3s, transform .3s';obs.observe(el);});
+document.querySelector('.upload-box').addEventListener('click',function(){this.style.borderColor='#0288d1';this.querySelector('.ub-icon').textContent='✅';this.querySelector('.ub-title').textContent='Prescription Ready!';setTimeout(()=>{this.style.borderColor='';this.querySelector('.ub-icon').textContent='📋';this.querySelector('.ub-title').textContent='Upload Prescription';},3000);});

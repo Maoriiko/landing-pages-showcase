@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learnly — Master Any Skill</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Satoshi:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav>
+  <div class="logo">learnly</div>
+  <ul><li><a href="#">Courses</a></li><li><a href="#">Instructors</a></li><li><a href="#">Paths</a></li><li><a href="#">Enterprise</a></li></ul>
+  <div class="nav-actions"><a href="#" class="login">Log in</a><a href="#" class="signup">Sign up free</a></div>
+  <button class="mob-menu" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+</nav>
+<section class="hero">
+  <div class="hero-content">
+    <div class="pill"><span>🔥</span> 50K+ courses added this month</div>
+    <h1>Learn <span class="rotating-word" id="rotator">Anything</span>.<br>From Experts.</h1>
+    <p>Join 18 million learners mastering in-demand skills with world-class instructors. At your own pace, on any device.</p>
+    <div class="search-row">
+      <input type="text" placeholder="What do you want to learn today?">
+      <button>Search</button>
+    </div>
+    <div class="topics"><span>Python</span><span>Design</span><span>Marketing</span><span>Finance</span><span>AI & ML</span></div>
+  </div>
+  <div class="course-preview">
+    <div class="cp-card">
+      <div class="cp-thumb" style="background:linear-gradient(135deg,#1e3a5f,#0ea5e9)"><span>🐍</span></div>
+      <div class="cp-body"><h4>Python for Data Science</h4><div class="stars">★★★★★ <span>4.9</span></div><p>Dr. Ana Rodriguez · 47,291 students</p></div>
+    </div>
+    <div class="cp-card">
+      <div class="cp-thumb" style="background:linear-gradient(135deg,#4a1d96,#7c3aed)"><span>🎨</span></div>
+      <div class="cp-body"><h4>UI/UX Design Masterclass</h4><div class="stars">★★★★★ <span>4.8</span></div><p>Mark Chen · 32,840 students</p></div>
+    </div>
+    <div class="cp-card">
+      <div class="cp-thumb" style="background:linear-gradient(135deg,#064e3b,#059669)"><span>📈</span></div>
+      <div class="cp-body"><h4>Growth Marketing Bootcamp</h4><div class="stars">★★★★½ <span>4.7</span></div><p>Sarah Kim · 28,100 students</p></div>
+    </div>
+  </div>
+</section>
+<section class="stats-band">
+  <div class="sb"><b>18M+</b><p>Active Learners</p></div>
+  <div class="sb"><b>600K+</b><p>Courses Available</p></div>
+  <div class="sb"><b>70K+</b><p>Expert Instructors</p></div>
+  <div class="sb"><b>180+</b><p>Countries</p></div>
+</section>
+<footer><p>© 2025 Learnly Inc. · Learning never stops</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

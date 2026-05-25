@@ -1,0 +1,3 @@
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0)'}}));
+document.querySelectorAll('.car-card').forEach((el,i)=>{el.style.cssText='opacity:0;transform:translateY(25px);transition:all .5s '+(i*.1)+'s, border .3s, box-shadow .3s, transform .3s';obs.observe(el);});
+document.querySelectorAll('.book-car').forEach(btn=>{btn.addEventListener('click',e=>{e.preventDefault();btn.textContent='✓ Reserved!';btn.style.background='#16a34a';setTimeout(()=>{btn.textContent='Book Now';btn.style.background='';},3000);});});

@@ -1,0 +1,45 @@
+:root{--bg:#0a0c10;--surface:#12151c;--gold:#b8973a;--text:#e8e6e1;--mid:#8a8880;--border:rgba(184,151,58,.15)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.25rem 4rem;background:rgba(10,12,16,.9);backdrop-filter:blur(15px);border-bottom:1px solid var(--border);gap:1rem}
+.logo{font-family:'Libre Baskerville',serif;font-size:.7rem;letter-spacing:.3em;line-height:1.6;color:var(--gold);text-transform:uppercase;flex-shrink:0}
+nav ul{list-style:none;display:flex;gap:2.5rem;flex:1;justify-content:center}
+nav ul a{color:var(--mid);text-decoration:none;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;transition:color .3s}
+nav ul a:hover{color:var(--text)}
+.consult-btn{background:var(--gold);color:var(--bg);padding:.7rem 1.6rem;text-decoration:none;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;transition:all .3s;flex-shrink:0}
+.consult-btn:hover{background:#d4a84a}
+.mob-menu{display:none;background:none;border:none;color:var(--gold);font-size:1.3rem;cursor:pointer}
+.hero{display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:end;padding:8rem 4rem 5rem;min-height:100vh;position:relative}
+.hero-accent{position:absolute;top:0;left:0;bottom:0;width:4px;background:linear-gradient(to bottom,transparent,var(--gold),transparent)}
+.hero-content{max-width:640px}
+.eyebrow{font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:block;animation:fadeUp .8s .3s both}
+h1{font-family:'Libre Baskerville',serif;font-size:clamp(3.5rem,7vw,6.5rem);line-height:1;margin-bottom:2rem;font-weight:700;animation:fadeUp .8s .5s both}
+h1 em{font-style:italic;color:var(--gold);font-weight:400}
+.hero-content p{font-size:1.1rem;color:var(--mid);line-height:1.8;max-width:500px;margin-bottom:3rem;font-weight:300;animation:fadeUp .8s .7s both}
+.btns{display:flex;gap:1.25rem;flex-wrap:wrap;animation:fadeUp .8s .9s both}
+.btn-primary{background:var(--gold);color:var(--bg);padding:1rem 2.4rem;text-decoration:none;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;transition:all .3s}
+.btn-primary:hover{background:#d4a84a;transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(184,151,58,.3);color:var(--text);padding:1rem 2.4rem;text-decoration:none;font-size:.85rem;letter-spacing:.1em;transition:all .3s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hero-stats{display:flex;flex-direction:column;gap:2.5rem;padding-bottom:1rem;animation:fadeIn 1s 1s both}
+.hs{text-align:right;border-right:2px solid var(--gold);padding-right:2rem}
+.hs span{font-family:'Libre Baskerville',serif;font-size:2.5rem;font-weight:700;color:var(--gold);display:block}
+.hs p{font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-top:.3rem}
+.practice{padding:6rem 4rem;background:var(--surface)}
+.practice h2{font-family:'Libre Baskerville',serif;font-size:2.5rem;font-weight:700;margin-bottom:3rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.pa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border)}
+.pa{background:var(--surface);padding:2.5rem 2rem;transition:background .3s}
+.pa:hover{background:rgba(184,151,58,.07)}
+.pa span{font-size:2rem;display:block;margin-bottom:1.25rem}
+.pa h3{font-family:'Libre Baskerville',serif;font-size:1.1rem;margin-bottom:.75rem;color:var(--gold)}
+.pa p{font-size:.88rem;color:var(--mid);line-height:1.8;font-weight:300}
+.cta-band{padding:6rem 4rem;background:var(--gold);text-align:center}
+.cta-band h2{font-family:'Libre Baskerville',serif;font-size:2.5rem;color:var(--bg);margin-bottom:1rem}
+.cta-band p{font-size:1.05rem;color:rgba(10,12,16,.7);margin-bottom:2.5rem;max-width:500px;margin-left:auto;margin-right:auto}
+.band-btn{display:inline-block;background:var(--bg);color:var(--gold);padding:1.1rem 3rem;text-decoration:none;font-size:.9rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;transition:all .3s}
+.band-btn:hover{background:#1a1c24;transform:translateY(-2px)}
+footer{text-align:center;padding:2rem;color:var(--mid);font-size:.78rem;letter-spacing:.1em;border-top:1px solid var(--border)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@media(max-width:900px){nav{padding:1.2rem 1.5rem}nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(10,12,16,.98);flex-direction:column;padding:1.5rem;gap:1rem;border-bottom:1px solid var(--border)}nav ul.open{display:flex}.mob-menu{display:block}.hero{grid-template-columns:1fr;padding:6rem 1.5rem 3rem}.hero-stats{flex-direction:row;flex-wrap:wrap;gap:1.5rem}.hs{text-align:left;border-right:none;border-left:2px solid var(--gold);padding-right:0;padding-left:1rem}.pa-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.pa-grid{grid-template-columns:1fr}.practice{padding:4rem 1.5rem}.btns{flex-direction:column}}

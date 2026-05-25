@@ -1,0 +1,47 @@
+:root{--bg:#faf8f3;--dark:#1a2010;--green:#3d7a3a;--warm:#c4956a;--cream:#f0e8d8;--muted:#6a7860;--border:#ddd8c8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--dark);font-family:'Source Sans 3',sans-serif;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5%;background:#fff;border-bottom:3px solid var(--green)}
+.logo{font-family:'Merriweather',serif;font-size:1.2rem;font-weight:700}
+nav ul{list-style:none;display:flex;gap:2.5rem}
+nav ul a{color:var(--muted);text-decoration:none;font-size:.9rem;transition:color .3s}
+nav ul a:hover{color:var(--green)}
+.donate-btn{background:var(--green);color:#fff;padding:.7rem 1.8rem;border-radius:4px;text-decoration:none;font-size:.9rem;font-weight:600;transition:all .3s}
+.donate-btn:hover{background:#2d5a2a}
+.hero{min-height:75vh;position:relative;display:flex;align-items:center;background:linear-gradient(135deg,#1a2c10,#2d4a20)}
+.hero-content{position:relative;z-index:2;padding:6rem 5%;max-width:720px}
+.overline{font-size:.78rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(240,232,216,.6);margin-bottom:1.5rem;display:block}
+h1{font-family:'Merriweather',serif;font-size:clamp(2rem,4.5vw,3.8rem);line-height:1.25;color:#faf8f3;margin-bottom:1.5rem;font-weight:700}
+h1 em{font-style:italic;color:#a8d4a0;font-weight:400}
+.hero-content p{color:rgba(250,248,243,.7);font-size:1.05rem;line-height:1.8;max-width:520px;margin-bottom:2.5rem;font-weight:300}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-donate{background:var(--warm);color:#fff;padding:1rem 2.5rem;text-decoration:none;font-size:1rem;font-weight:600;border-radius:4px;transition:all .3s}
+.btn-donate:hover{background:#b07850;transform:translateY(-2px)}
+.btn-learn{color:rgba(250,248,243,.7);text-decoration:none;font-size:1rem;padding:1rem 1.5rem;border:1px solid rgba(250,248,243,.3);border-radius:4px;transition:all .3s}
+.btn-learn:hover{border-color:rgba(250,248,243,.7);color:#faf8f3}
+.impact-numbers{display:grid;grid-template-columns:repeat(4,1fr);background:var(--green)}
+.ii{text-align:center;padding:3rem 2rem;border-right:1px solid rgba(255,255,255,.1)}
+.ii:last-child{border-right:none}
+.in{font-family:'Merriweather',serif;font-size:2.8rem;font-weight:700;color:#fff}
+.ii>span:last-of-type{font-family:'Merriweather',serif;font-size:2rem;color:rgba(255,255,255,.7)}
+.ii p{color:rgba(255,255,255,.7);font-size:.85rem;margin-top:.5rem;text-transform:uppercase;letter-spacing:.1em}
+.programs{padding:6rem 5%}
+.programs h2{font-family:'Merriweather',serif;font-size:2.5rem;font-weight:400;text-align:center;margin-bottom:3rem}
+.programs h2 em{font-style:italic;color:var(--green)}
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.pc2{background:#fff;border:1px solid var(--border);border-radius:4px;padding:2.5rem;border-top:4px solid transparent;transition:all .3s;cursor:default}
+.pc2:hover{border-top-color:var(--green);transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.pc2>span,.pc2:first-line{font-size:2.5rem;display:block;margin-bottom:1.5rem}
+.pc2 h3{font-family:'Merriweather',serif;font-size:1.2rem;font-weight:700;margin-bottom:1rem}
+.pc2 p{color:var(--muted);font-size:.92rem;line-height:1.7}
+.donate-strip{background:var(--cream);padding:5rem 5%;text-align:center}
+.donate-strip h2{font-family:'Merriweather',serif;font-size:2.2rem;font-weight:400;margin-bottom:2.5rem}
+.donate-strip h2 em{font-style:italic;color:var(--green)}
+.amounts{display:flex;gap:1rem;justify-content:center;margin-bottom:1.5rem;flex-wrap:wrap}
+.am{background:#fff;border:2px solid var(--border);padding:.75rem 1.75rem;border-radius:4px;font-size:1rem;font-weight:600;cursor:pointer;transition:all .3s;font-family:'Source Sans 3',sans-serif;color:var(--dark)}
+.am:hover,.am.active{background:var(--green);color:#fff;border-color:var(--green)}
+.imp-text{color:var(--muted);font-size:.95rem;margin-bottom:2rem}
+.donate-big{display:inline-block;background:var(--warm);color:#fff;padding:1.1rem 3.5rem;text-decoration:none;font-size:1.1rem;font-weight:700;border-radius:4px;transition:all .3s}
+.donate-big:hover{background:#b07850;transform:translateY(-2px)}
+footer{text-align:center;padding:2rem;color:var(--muted);font-size:.82rem;border-top:1px solid var(--border)}
+@media(max-width:768px){.impact-numbers{grid-template-columns:1fr 1fr}.prog-grid{grid-template-columns:1fr}nav ul{display:none}}

@@ -1,0 +1,3 @@
+document.querySelectorAll('.code-block code span').forEach(s=>{s.style.transition='color .3s';});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateX(0)'}}));
+document.querySelectorAll('.feat-text,.feat-visual').forEach((el,i)=>{el.style.cssText='opacity:0;transform:translateX('+(i%2===0?'-30px':'30px')+');transition:all .7s '+(i*.1)+'s';obs.observe(el);});

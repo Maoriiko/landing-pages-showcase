@@ -1,0 +1,4 @@
+document.querySelectorAll('.pf').forEach(btn=>{btn.addEventListener('click',function(){document.querySelectorAll('.pf').forEach(b=>b.classList.remove('active'));this.classList.add('active');});});
+document.querySelectorAll('.pc button').forEach(btn=>{btn.addEventListener('click',function(e){e.stopPropagation();this.textContent='✓ Added!';this.style.background='#1a5a10';setTimeout(()=>{this.textContent='Add to Cart';this.style.background='';},2000);});});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0)'}}));
+document.querySelectorAll('.wu').forEach((el,i)=>{el.style.cssText='opacity:0;transform:translateY(20px);transition:all .5s '+(i*.1)+'s';obs.observe(el);});

@@ -1,0 +1,2 @@
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform='translateY(0)'}}));
+document.querySelectorAll('.pa-item,.stat-card').forEach((el,i)=>{el.style.cssText='opacity:0;transform:translateY(25px);transition:all .6s '+(i*.1)+'s, border-top .3s';obs.observe(el);});

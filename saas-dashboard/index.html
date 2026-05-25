@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashify — Analytics Made Simple</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav>
+  <div class="logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="9" height="9" rx="2" fill="#6366f1"/><rect x="13" y="2" width="9" height="9" rx="2" fill="#a5b4fc"/><rect x="2" y="13" width="9" height="9" rx="2" fill="#a5b4fc"/><rect x="13" y="13" width="9" height="9" rx="2" fill="#6366f1"/></svg>Dashify</div>
+  <ul><li><a href="#">Features</a></li><li><a href="#">Pricing</a></li><li><a href="#">Docs</a></li><li><a href="#">Blog</a></li></ul>
+  <div class="nav-actions"><a href="#" class="sign-in">Sign in</a><a href="#" class="start-btn">Get Started Free</a></div>
+  <button class="mobile-menu" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+</nav>
+<section class="hero">
+  <div class="hero-text">
+    <div class="badge"><span class="dot"></span>Now with AI Insights</div>
+    <h1>Turn Your Data Into <span>Decisions</span></h1>
+    <p>Beautiful dashboards, real-time analytics, and AI-powered insights — all in one platform. No SQL required.</p>
+    <div class="cta-group"><a href="#" class="btn-primary">Start for free</a><a href="#" class="btn-secondary">See a live demo →</a></div>
+    <p class="trial-note">✓ Free 14-day trial &nbsp; ✓ No credit card &nbsp; ✓ Cancel anytime</p>
+  </div>
+  <div class="hero-visual">
+    <div class="dashboard-mock">
+      <div class="mock-topbar"><div class="dots"><span></span><span></span><span></span></div><p>Analytics Overview</p></div>
+      <div class="mock-body">
+        <div class="mock-stat"><p class="stat-val">$48,291</p><p class="stat-lbl">Revenue</p><span class="up">↑ 12.4%</span></div>
+        <div class="mock-stat"><p class="stat-val">3,841</p><p class="stat-lbl">Users</p><span class="up">↑ 8.1%</span></div>
+        <div class="mock-stat"><p class="stat-val">94.2%</p><p class="stat-lbl">Retention</p><span class="up">↑ 2.3%</span></div>
+        <div class="mock-chart">
+          <div class="bars">
+            <div class="bar" style="--h:40%"></div><div class="bar" style="--h:65%"></div><div class="bar" style="--h:45%"></div>
+            <div class="bar" style="--h:80%"></div><div class="bar" style="--h:60%"></div><div class="bar" style="--h:90%"></div>
+            <div class="bar active" style="--h:75%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="logos"><p>Trusted by teams at</p><div class="logo-row"><span>Stripe</span><span>Notion</span><span>Linear</span><span>Figma</span><span>Vercel</span></div></section>
+<section class="features">
+  <h2>Everything you need to <span>understand your users</span></h2>
+  <div class="feat-grid">
+    <div class="feat-box"><div class="feat-icon">📊</div><h3>Real-Time Dashboards</h3><p>Instant updates as your data changes. No refresh needed.</p></div>
+    <div class="feat-box"><div class="feat-icon">🤖</div><h3>AI Summaries</h3><p>Get plain-English explanations of trends and anomalies.</p></div>
+    <div class="feat-box"><div class="feat-icon">🔗</div><h3>100+ Integrations</h3><p>Connect Postgres, Stripe, Salesforce, and more in minutes.</p></div>
+    <div class="feat-box"><div class="feat-icon">🔔</div><h3>Smart Alerts</h3><p>Get notified via Slack or email when metrics cross thresholds.</p></div>
+    <div class="feat-box"><div class="feat-icon">🔒</div><h3>Role-Based Access</h3><p>Share dashboards with your team — control who sees what.</p></div>
+    <div class="feat-box"><div class="feat-icon">📱</div><h3>Mobile Ready</h3><p>Check your metrics anywhere. Fully responsive and fast.</p></div>
+  </div>
+</section>
+<footer><p>© 2025 Dashify Inc. · Built with ♥ for data-driven teams</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

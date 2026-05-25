@@ -1,0 +1,42 @@
+:root{--bg:#f9f8f5;--dark:#1a1a0d;--green:#2d7a3a;--accent:#f5a800;--border:#e0ddd5;--muted:#6a6a5a;--surface:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--dark);font-family:'Hind',sans-serif;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;background:#fff;border-bottom:2px solid var(--green);flex-wrap:wrap;gap:.5rem}
+.logo{font-family:'Spectral',serif;font-size:1.3rem;font-weight:600;color:var(--dark)}
+nav ul{list-style:none;display:flex;gap:2rem}
+nav ul a{color:var(--muted);text-decoration:none;font-size:.88rem;transition:color .2s}
+nav ul a:hover{color:var(--green)}
+.subscribe-btn{background:var(--green);color:#fff;padding:.65rem 1.5rem;border-radius:6px;text-decoration:none;font-size:.88rem;font-weight:500;transition:all .3s}
+.subscribe-btn:hover{background:#1f5c2a}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:center;padding:5rem 5%;min-height:85vh;background:linear-gradient(160deg,#f9f8f5,#f0f5e8)}
+.hero-label{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:1.5rem;font-weight:500}
+h1{font-family:'Spectral',serif;font-size:clamp(2.2rem,4vw,3.8rem);line-height:1.2;margin-bottom:1.25rem;font-weight:600;animation:fadeUp .8s .3s both}
+h1 em{font-style:italic;color:var(--green)}
+.hero-content>p{color:var(--muted);font-size:1.05rem;line-height:1.8;max-width:500px;margin-bottom:2rem;animation:fadeUp .8s .5s both}
+.newsletter-cta{display:flex;gap:.5rem;margin-bottom:.75rem;animation:fadeUp .8s .6s both;max-width:460px}
+.newsletter-cta input{flex:1;padding:.85rem 1.25rem;border:1.5px solid var(--border);border-radius:6px;font-size:.9rem;font-family:'Hind',sans-serif;outline:none;transition:border-color .2s}
+.newsletter-cta input:focus{border-color:var(--green)}
+.newsletter-cta button{background:var(--green);color:#fff;border:none;padding:.85rem 1.5rem;border-radius:6px;font-size:.88rem;font-weight:600;cursor:pointer;font-family:'Hind',sans-serif;white-space:nowrap;transition:all .2s}
+.newsletter-cta button:hover{background:#1f5c2a}
+.no-spam{font-size:.78rem;color:var(--muted);animation:fadeUp .8s .7s both}
+.hero-chart{background:#fff;border-radius:16px;padding:2rem;border:1.5px solid var(--border);box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.chart-title{font-size:.82rem;font-weight:600;color:var(--muted);margin-bottom:1.5rem}
+.chart-bars{display:flex;align-items:flex-end;gap:.35rem;height:140px;margin-bottom:.5rem}
+.chart-labels{display:flex;justify-content:space-between;font-size:.7rem;color:var(--muted);margin-bottom:1rem}
+.chart-result{font-size:.88rem;color:var(--dark);}
+.chart-result strong{color:var(--green)}
+.topics{padding:5rem 5%;background:#fff;border-top:1px solid var(--border)}
+.topics h2{font-family:'Spectral',serif;font-size:2.2rem;font-weight:600;text-align:center;margin-bottom:3rem}
+.topics h2 em{font-style:italic;color:var(--green)}
+.topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.topic{background:var(--bg);border:1.5px solid var(--border);border-radius:12px;padding:2rem;transition:all .3s}
+.topic:hover{border-color:var(--green);transform:translateY(-4px);box-shadow:0 10px 30px rgba(45,122,58,.08)}
+.t-icon{font-size:2.5rem;margin-bottom:1rem;display:block}
+.topic h3{font-family:'Spectral',serif;font-size:1.1rem;font-weight:600;margin-bottom:.75rem}
+.topic p{color:var(--muted);font-size:.85rem;line-height:1.6;margin-bottom:1rem}
+.topic a{color:var(--green);text-decoration:none;font-size:.85rem;font-weight:500;transition:opacity .2s}
+.topic a:hover{opacity:.7}
+footer{text-align:center;padding:2rem;color:var(--muted);font-size:.82rem;border-top:1px solid var(--border)}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:3rem}.topic-grid{grid-template-columns:1fr 1fr}nav ul{display:none}}
+@media(max-width:480px){.topic-grid{grid-template-columns:1fr}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
